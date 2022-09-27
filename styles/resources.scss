@@ -1,0 +1,33 @@
+@import './main.scss';
+@import './components/common_hero';
+
+.resources {
+    padding: 5rem 7%;
+    background: lighten($black, 90%);
+}
+
+.resource_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.resource_item {
+    background: $white;
+    padding: 2rem;
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero{
+        height: 80vh;
+    }
+    .resource_wrapper {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+input,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.section_title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.section_title span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section_para {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.button {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  background: #97D7E6;
+  color: #000000;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background: #45b7d2;
+}
+
+.hero {
+  background: url("../img/hero_bg.png") no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  height: 100vh;
+  position: relative;
+}
+.hero header {
+  position: relative;
+  padding: 0.8rem 7%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.hero header .logo a img {
+  width: 70%;
+}
+.hero header .nav_links a {
+  position: relative;
+  color: #ffffff;
+  margin: 0 1rem;
+  display: inline-block;
+}
+.hero header .nav_links a::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.hero header .nav_links a:hover::after {
+  width: 50%;
+  left: 25%;
+}
+.hero header .nav_contact a {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #97D7E6;
+  color: #000000;
+  padding: 0.8rem 7%;
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+.hero header .nav_contact a:hover {
+  background: #45b7d2;
+  color: #ffffff;
+}
+
+.hero_text {
+  padding: 0 7%;
+  position: absolute;
+  top: 35%;
+}
+.hero_text h1 {
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.hero_text h1 span {
+  color: #97D7E6;
+}
+.hero_text p {
+  color: rgba(255, 255, 255, 0.8);
+  width: 75%;
+}
+
+.hero_bottom_container {
+  position: absolute;
+  top: calc(100% - 150px);
+  left: 0;
+  width: 100%;
+  height: 150px;
+}
+.hero_bottom_container h2 {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}
+.hero_bottom_container .hero_bottom_left {
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  left: 7%;
+  display: inline-flex;
+  align-items: center;
+}
+.hero_bottom_container .hero_bottom_left a {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.hero_bottom_container .hero_bottom_left a:hover {
+  color: #97D7E6;
+}
+.hero_bottom_container .hero_bottom_right {
+  background: #e9f7fa;
+  width: 38%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero_bottom_container .hero_bottom_right h2 {
+  color: #000000;
+}
+.hero_bottom_container .hero_bottom_right a {
+  display: flex;
+  align-items: center;
+  color: #185766;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.hero_bottom_container .hero_bottom_right a:hover {
+  color: #45b7d2;
+}
+.hero_bottom_container .hero_bottom_right a svg {
+  fill: #185766;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.hero_bottom_container .hero_bottom_right a:hover svg {
+  opacity: 1;
+  transform: translateX(1rem);
+}
+
+.about_container {
+  padding: 5rem 7%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  align-items: center;
+  background: #e9f7fa;
+}
+
+.domains {
+  background: #fff;
+  padding: 5rem 7%;
+}
+.domains .domain_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.domains .domain_container .each_domain {
+  position: relative;
+  height: 500px;
+  padding: 2rem;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.domains .domain_container .each_domain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.domains .domain_container .each_domain:hover::after {
+  opacity: 1;
+}
+.domains .domain_container .each_domain img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.domains .domain_container .each_domain .domain_info {
+  position: absolute;
+  top: 2rem;
+  z-index: 1;
+}
+.domains .domain_container .each_domain .domain_info h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.domains .domain_container .each_domain .domain_foot {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  padding: 0 2rem;
+  width: 100%;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.domains .domain_container .each_domain .domain_foot span {
+  background: #ffffff;
+  height: 1.5px;
+  right: 0;
+  width: calc(100% - 2rem);
+}
+
+.memories {
+  background: #EEFCFF;
+  padding: 5rem 7%;
+  display: flex;
+  flex-direction: column;
+}
+.memories .memories_container {
+  position: relative;
+}
+.memories .memories_container img {
+  width: 100%;
+}
+.memories .memories_container .memories_image {
+  position: relative;
+  background: #ffffff;
+}
+.memories .memories_container .memories_image p {
+  padding: 2rem;
+}
+.memories .memories_container .owl-nav {
+  position: absolute;
+  top: calc(50% - 90px);
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.memories .memories_container .owl-nav button {
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.memories .memories_container .owl-nav button:hover {
+  background: #185766;
+}
+.memories .memories_container .owl-nav button span {
+  font-size: 2rem;
+}
+.memories .memories_container .owl-nav .owl-prev {
+  margin-left: -25px;
+}
+.memories .memories_container .owl-nav .owl-next {
+  margin-right: -25px;
+}
+.memories .memories_container .owl-dots {
+  margin-top: 1rem;
+}
+
+.action_call {
+  background: #97D7E6;
+  text-align: center;
+  padding: 5rem 7%;
+  font-family: "Montserrat", sans-serif;
+  background: url(../img/memories_1.png) repeat no-repeat center center/cover;
+  position: relative;
+  z-index: 0;
+  color: #ffffff;
+}
+.action_call::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+footer {
+  background: #185766;
+}
+footer hr {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  height: 1px;
+}
+footer .footer_container {
+  background: #185766;
+  padding: 2rem 7%;
+  color: #ffffff;
+  justify-content: space-between;
+  display: flex;
+}
+footer .footer_container h3 {
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+footer .footer_container .footer_links a {
+  color: #ffffff;
+  display: table;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer_container .footer_links a:hover {
+  color: #e9f7fa;
+}
+footer .footer_container .footer_center a {
+  color: #ffffff;
+  display: flex;
+  margin: 0.5rem 0;
+}
+footer .footer_container .footer_center a img {
+  margin-right: 0.5rem;
+}
+footer .footer_container .footer_contact a {
+  color: #ffffff;
+  display: block;
+  margin: 0.5rem 0;
+}
+footer .footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 7%;
+}
+footer .footer_bottom p,
+footer .footer_bottom span {
+  color: #ffffff;
+}
+footer .footer_bottom span {
+  cursor: pointer;
+}
+
+.hero {
+  height: 50vh;
+}
+
+.hero_text {
+  width: 100%;
+  text-align: center;
+}
+.hero_text p {
+  width: 100%;
+}
+
+.team {
+  padding: 5rem 7%;
+  background: #e6e6e6;
+  color: #000000;
+}
+.team .team_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.team .team_container_1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.team .team_content {
+  display: inline-grid;
+  background: #ffffff;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.team .team_content:hover img {
+  border-color: #185766;
+}
+.team .team_content img {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 5px solid #97D7E6;
+  transition: all 0.3s ease-in-out;
+}
+.team .team_content .team_social {
+  margin: 1rem 0;
+}
+.team .team_content .team_social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+}
+.team .team_content .team_social img {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.team.alumni, .team.contributors {
+  padding-top: 0;
+}
+
+.contributors_button_wrap a {
+  display: table;
+  margin-left: auto;
+}/*# sourceMappingURL=members.css.map */

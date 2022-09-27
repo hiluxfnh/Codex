@@ -1,0 +1,77 @@
+
+@import './main.scss';
+@import './components/common_hero';
+
+
+.team {
+    padding: 5rem 7%;
+    background: lighten($black, 90%);
+    color: $black;
+
+    // .button{
+    //     float: right;
+    //     margin-top: 1rem;
+    // }
+    .team_container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .team_container_1{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .team_content{
+        display: inline-grid;
+        background: $white;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:hover img {
+            border-color: $dark_theme;
+        }
+
+        img {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            border: 5px solid $theme;
+            transition: $transition;
+        }
+
+        .team_social{
+            margin: 1rem 0;
+
+            a {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin: 0 0.5rem;  
+            }
+
+            img {
+                border: none;
+                border-radius: 0;
+                margin: 0;
+                width: 100%;
+            }
+            
+        }
+
+    }
+}
+
+.team.alumni, .team.contributors {
+    padding-top: 0;
+}
+
+.contributors_button_wrap a {
+    display: table;
+    margin-left: auto;
+}

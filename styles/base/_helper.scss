@@ -1,0 +1,31 @@
+
+.section_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: $black;
+    margin-bottom: 1rem;
+
+    span {
+        color: rgba($black, 0.5);
+    }
+}
+
+.section_para {
+    color: rgba($black, 0.7);
+}
+
+.button {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    background: $theme;
+    color: $black;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    transition: $transition;
+
+    &:hover {
+        background: darken($theme, 20%);
+    }
+}

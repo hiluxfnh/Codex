@@ -1,0 +1,401 @@
+.hero {
+    background: url('../img/hero_bg.png') no-repeat center center;
+    background-size: cover;
+    color: $white;
+    height: 100vh;
+    position: relative;
+
+    header {
+        position: relative;
+        padding: 0.8rem 7%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        backdrop-filter: blur(50px);
+
+        .logo a img {
+            width: 70%;
+        }
+
+        .nav_links a {
+            position: relative;
+            color: $white;
+            margin: 0 1rem;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(100% + 0.5rem);
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: $white;
+                transition: $transition;
+            }
+
+            &:hover::after {
+                width: 50%;
+                left: calc(50% - 25%);
+            }
+        }
+
+        .nav_contact a {
+            display: inline-flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background: $theme;
+            color: $black;
+            padding: 0.8rem 7%;
+            font-weight: 900;
+            transition: $transition;
+
+            &:hover {
+                background: darken($theme, 20%);
+                color: $white;
+            }
+        }
+    }
+}
+
+.hero_text {
+    padding: 0 7%;
+    position: absolute;
+    top: 35%;
+
+    h1 {
+        font-size: 4rem;
+        font-family: "Montserrat", sans-serif;
+
+        span {
+            color: $theme;
+        }
+    }
+
+    p {
+        color: rgba($white, 0.8);
+        width: 75%;
+    }
+}
+
+.hero_bottom_container {
+    position: absolute;
+    top: calc(100% - 150px);
+    left: 0;
+    width: 100%;
+    height: 150px;
+
+    h2 {
+        font-size: 1.4rem;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .hero_bottom_left {
+        width: 55%;
+        height: 100%;
+        position: absolute;
+        left: 7%;
+        display: inline-flex;
+        align-items: center;
+
+        a {
+            color: $white;
+            transition: $transition;
+
+            &:hover {
+                color: $theme;
+            }
+        }
+    }
+
+    .hero_bottom_right {
+        background: lighten($theme, 20%);
+        width: calc(45% - 7%);
+        position: absolute;
+        right: 0;
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: $black;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: darken($theme, 50%);
+            font-weight: bold;
+            transition: $transition;
+
+            &:hover {
+                color: darken($theme, 20%);
+            }
+
+            svg {
+                fill: darken($theme, 50%);
+                opacity: 0;
+                transition: $transition;
+            }
+
+            &:hover svg {
+                opacity: 1;
+                transform: translateX(1rem);
+            }
+        }
+    }
+}
+
+.about_container {
+    padding: 5rem 7%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    column-gap: 5rem;
+    align-items: center;
+    background: lighten($theme, 20%);
+}
+
+.domains {
+    background: #fff;
+    padding: 5rem 7%;
+
+    .domain_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .each_domain {
+            position: relative;
+            // overflow: hidden;
+            height: 500px;
+            padding: 2rem;
+            color: $white;
+            transition: all 0.3s ease-in-out;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($black, 0.8);
+                z-index: 0;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .domain_info {
+                position: absolute;
+                top: 2rem;
+                z-index: 1;
+
+                h2 {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .domain_foot {
+                position: absolute;
+                bottom: 2rem;
+                right: 0;
+                padding: 0 2rem;
+                width: 100%;
+                z-index: 1;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                span {
+                    background: $white;
+                    height: 1.5px;
+                    right: 0;
+                    width: calc(100% - 2rem);
+                }
+            }
+        }
+    }
+}
+
+.memories {
+    background: #EEFCFF;
+    padding: 5rem 7%;
+    display: flex;
+    flex-direction: column;
+
+    .memories_container {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .memories_image {
+            position: relative;
+            background: $white;
+
+            p {
+                padding: 2rem;
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: calc(50% - 90px);
+            margin-top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                background: $white;
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+
+                &:hover {
+                    background: darken($theme, 50%);
+                }
+
+                span {
+                    font-size: 2rem;
+                }
+            }
+
+            .owl-prev {
+                margin-left: -25px;
+            }
+
+            .owl-next {
+                margin-right: -25px;
+            }
+        }
+
+        .owl-dots {
+            margin-top: 1rem;
+        }
+    }
+
+}
+
+.action_call {
+    background: $theme;
+    text-align: center;
+    padding: 5rem 7%;
+    font-family: "Montserrat", sans-serif;
+    background: url(../img/memories_1.png) repeat no-repeat center center/cover;
+    position: relative;
+    z-index: 0;
+    color: $white;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($black, 0.8);
+        z-index: -1;
+    }
+}
+
+footer {
+    background: darken($theme, 50%);
+
+    hr {
+        margin: 0;
+        background: rgba($white, 0.5);
+        border: none;
+        height: 1px;
+    }
+
+    .footer_container {
+        background: darken($theme, 50%);
+        padding: 2rem 7%;
+        color: $white;
+        justify-content: space-between;
+        display: flex;
+
+        h3 {
+            margin-bottom: 1rem;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .footer_links {
+            a {
+                color: $white;
+                display: table;
+                margin: 0.5rem 0;
+                transition: $transition;
+
+                &:hover {
+                    color: lighten($theme, 20%);
+                }
+            }
+        }
+
+        .footer_center {
+            a {
+                color: $white;
+                display: flex;
+                margin: 0.5rem 0;
+
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        .footer_contact {
+            a {
+                color: $white;
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+
+    .footer_bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 7%;
+
+        p,
+        span {
+            color: $white;
+        }
+
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+

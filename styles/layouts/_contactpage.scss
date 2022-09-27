@@ -1,0 +1,38 @@
+
+@import '../components/common_hero';
+
+.contact {
+    padding: 5rem 7%;
+    background: $white;
+
+    form {
+        input[type="text"], input[type="email"], textarea {
+            padding: 1rem;
+            border: none;
+            background: lighten($black, 90%);
+        }
+        input[type="text"] {
+            width: 49%;
+        }
+        input[type="email"] {
+            width: 49%;
+            margin-left: 1.5%;
+        }
+      
+        textarea {
+            width: 100%;
+            margin-top: 1.5%;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            border: none;
+            display: block;
+            margin: 1.5% 0 0 auto;
+        }
+    }
+}
+
+.map {
+    height: 300px;
+}
